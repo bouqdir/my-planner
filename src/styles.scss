@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  font-family: "TT Fors Trial", sans-serif;
+  background: rgb(228, 242, 250);
+  background: linear-gradient(
+    294deg,
+    rgba(228, 242, 250, 0.9725140056022409) 0%,
+    rgba(245, 247, 250, 1) 100%
+  );
+}
+
+h1,
+h4 {
+  font-family: "TT Fors Trial", sans-serif;
+}
+
+button {
+  background-color: #d4f7fcbe;
+  color: black;
+  border: none;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.3em 0em;
+  cursor: pointer;
+}

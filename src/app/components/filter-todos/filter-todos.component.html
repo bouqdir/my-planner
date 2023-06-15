@@ -1,0 +1,34 @@
+<div class="filter-container">
+  Filter by:
+  <button
+    class="btn-done"
+    [ngClass]="{ 'btn-current-filter': currentFilter === filterBy.DONE }"
+    type="button"
+    (click)="filterByState(filterBy.DONE)"
+    value="done"
+  >
+    Done
+  </button>
+  <button
+    class="btn-todo"
+    [ngClass]="{ 'btn-current-filter': currentFilter === filterBy.TO_BE_DONE }"
+    type="button"
+    (click)="filterByState(filterBy.TO_BE_DONE)"
+    value="todo"
+  >
+    To be done
+  </button>
+  <button
+    [ngClass]="{ 'btn-current-filter': currentFilter === filterBy.ALL }"
+    class="btn-all"
+    type="button"
+    (click)="filterByState(filterBy.ALL)"
+    value="all"
+  >
+    All
+  </button>
+
+  <button class="btn-clear" type="button" (click)="deleteAll()" value="clear">
+    Clear list
+  </button>
+</div>

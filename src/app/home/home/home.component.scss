@@ -1,0 +1,51 @@
+.container {
+  margin: auto;
+  margin-top: 15em;
+  margin-left: 12em;
+  font-size: large;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 1em;
+  margin: 1em 0.2em 1em 1.5em;
+  border: gray 2px solid;
+  box-sizing: border-box;
+
+  border-radius: 5px;
+  flex-grow: 1; /* default 0 */
+}
+
+a {
+  background-color: #96baf1;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  font-size: medium;
+  padding: 0.7em;
+  margin: 0.7em;
+  cursor: pointer;
+}
+
+.btn-start {
+  background-color: transparent;
+  border: 2px solid gray;
+  color: gray;
+
+  &:hover {
+    background-color: #96baf1;
+    color: white;
+    border: 2px solid transparent;
+  }
+}
+
+.contact-items {
+  flex-grow: 3;
+}
+
+.contact-message {
+  display: flex;
+  align-self: center;
+}

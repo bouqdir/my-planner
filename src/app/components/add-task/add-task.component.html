@@ -1,0 +1,12 @@
+<form (submit)="onAddTask()" class="add-container">
+  <input
+    type="text"
+    name="content"
+    placeholder="I have to do..."
+    [(ngModel)]="currentTodocontent"
+    autofocus
+  />
+  <button class="add-mode" type="submit" value="add" title="add">
+    <span> &#43;</span>
+  </button>
+</form>

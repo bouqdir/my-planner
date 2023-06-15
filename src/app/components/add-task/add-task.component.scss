@@ -1,0 +1,27 @@
+input[type="text"] {
+  padding: 1em;
+  margin: 1em 0.5em 1em 1.5em;
+  box-sizing: border-box;
+  border: #e4f2fa 1px solid;
+  border-radius: 5px;
+  flex-grow: 1; /* default 0 */
+}
+.add-mode {
+  background-color: #96baf1;
+
+  border-radius: 5px;
+  color: white;
+  font-size: medium;
+  padding: 0.7em;
+}
+
+span ::before {
+  content: "\F4FE";
+}
+
+.add-container {
+  font-size: smaller;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Today's todo-list:</h1>
+  <h4>
+    <i> {{ todaysDate | date : "fullDate" }}</i>
+  </h4>
+
+  <todo-add-task></todo-add-task>
+
+  <todo-filter (usedFilter)="getCurrentFilter($event)"></todo-filter>
+
+  <todo-card
+    *ngFor="let t of tasks; let index = index"
+    [draggable]="true"
+    (dragstart)="onDragStart(index)"
+    (dragenter)="onDragEnter(index)"
+    (dragend)="onDragEnd()"
+    [todo]="t"
+  ></todo-card>
+</div>

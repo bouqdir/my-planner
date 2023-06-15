@@ -1,0 +1,65 @@
+<div
+  [todoDisplayMode]="currentMode"
+  class="row todo-card flex-container"
+  [ngClass]="{ 'card-task-done': todo.isDone }"
+>
+  <!--By default, show checkbox with the content of todo-->
+  <label
+    *ngIf="currentMode === mode.Display"
+    [ngClass]="{ 'label-task-done': todo.isDone }"
+  >
+    <input
+      type="checkbox"
+      [checked]="todo.isDone"
+      [(ngModel)]="todo.isDone"
+      (ngModelChange)="onCheckChange()"
+    />
+    {{ todo.content }}
+  </label>
+
+  <!--To edit a todo, change the displayed content to an input -->
+  <form (submit)="onSaveEditTodo(todo)" *ngIf="currentMode === mode.Edit">
+    <input type="text" name="content" [(ngModel)]="todo.content" />
+
+    <!--In edit mode, show save and cancel buttons-->
+    <div class="box-btn" *ngIf="currentMode === mode.Edit">
+      <button
+        class="cancel-edit-btn"
+        type="button"
+        value="delete"
+        (click)="disableEdit()"
+      >
+        <span>&#10007;</span>
+      </button>
+      <button
+        class="save-edit-btn"
+        type="submit"
+        title="edit"
+        value="edit"
+        (click)="onSaveEditTodo(todo)"
+      >
+        <span>&#10003;</span>
+      </button>
+    </div>
+  </form>
+
+  <!--By default, show edit delete buttons-->
+  <div class="box-btn" *ngIf="currentMode === mode.Display">
+    <button
+      class="delete-btn"
+      type="button"
+      value="delete"
+      (click)="onDeleteTodo(todo)"
+    >
+      <span>&#10006;</span>
+    </button>
+    <button
+      class="edit-mode-btn"
+      type="button"
+      value="edit"
+      (click)="enableEdit()"
+    >
+      <span>&#x270e;</span>
+    </button>
+  </div>
+</div>

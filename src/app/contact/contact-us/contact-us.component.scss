@@ -1,0 +1,53 @@
+.container {
+  margin: auto;
+  margin-top: 15em;
+  margin-left: 8em;
+  font-size: large;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 1em;
+  width: 450px;
+  margin: 1em 0.2em 1em 1.5em;
+  border: gray 2px solid;
+  box-sizing: border-box;
+  border-radius: 5px;
+  flex-grow: 3;
+  align-self: baseline;
+}
+
+button {
+  background-color: #96baf1;
+  border-radius: 5px;
+  color: white;
+  font-size: medium;
+  padding: 0.7em;
+  align-self: baseline;
+
+  margin: 0.7em;
+}
+
+.btn-send {
+  background-color: transparent;
+  border: 2px solid gray;
+  color: gray;
+
+  &:hover {
+    background-color: #96baf1;
+    color: white;
+    border: 2px solid transparent;
+  }
+}
+
+.contact-items {
+  flex-grow: 3;
+}
+
+.contact-message {
+  display: flex;
+  flex-direction: row nowrap;
+  align-self: center;
+}

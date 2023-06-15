@@ -1,0 +1,79 @@
+* {
+  font-family: "TT Fors Trial", sans-serif;
+}
+
+/* Checkbox & Inputs */
+
+label {
+  display: block;
+  width: 100%;
+  font-size: medium;
+}
+
+label > input[type="checkbox"] {
+  float: left;
+  margin-right: 1em;
+}
+
+input {
+  &:checked + label + p {
+    display: none;
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0.5em 1em 1.5em;
+  box-sizing: border-box;
+  border: #e4f2fa 1px solid;
+  border-radius: 5px;
+}
+
+/* Buttons appearance */
+
+.save-update-btn,
+.edit-mode-btn,
+.delete-btn,
+.cancel-edit-btn,
+.save-edit-btn {
+  color: gray;
+  padding: 0.5em;
+  background-color: transparent;
+  border: unset;
+}
+
+.box-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cancel-edit-btn {
+  background-color: #d1d6da;
+}
+.save-edit-btn {
+  background-color: #b7d5f3;
+}
+
+/* Card appearance */
+.todo-card {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fafeff;
+}
+
+.card-task-done {
+  background-color: #e4e8e9be;
+  border: none;
+}
+.label-task-done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+div.flex-container {
+  font-size: smaller;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}

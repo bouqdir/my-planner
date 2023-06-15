@@ -1,0 +1,51 @@
+/* Filter buttons appearance */
+* {
+  font-family: "TT Fors Trial", sans-serif;
+}
+.btn-done {
+  border-radius: 3px 0px 0px 3px;
+  border: 1px solid #96baf1;
+  border-right: none;
+  margin-left: 1em;
+}
+.btn-todo {
+  border: 1px solid #96baf1;
+}
+.btn-all {
+  border-radius: 0px 3px 3px 0px;
+  border: 1px solid #96baf1;
+  border-left: none;
+}
+
+.btn-current-filter {
+  font-weight: bold;
+  background-color: #96baf1;
+  color: white;
+}
+
+div.filter-container {
+  font-size: smaller;
+  margin: 3em 0em -0.5em 2em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}
+
+.btn-clear {
+  background-color: transparent;
+  border: unset;
+  text-decoration-line: underline;
+  color: black;
+  font-size: small;
+  padding-bottom: unset;
+  margin-bottom: unset;
+  margin-left: 41em;
+
+  flex-grow: 2; /* default 0 */
+  padding: 0%;
+
+  &:hover {
+    font-weight: bold;
+    color: Grey;
+  }
+}
